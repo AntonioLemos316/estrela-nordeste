@@ -1,19 +1,28 @@
 const mongoose = require('mongoose')
 
-const DestinoSchema = new mongoose.model({
-    nome: { type: String, required: true },
+const DestinoSchema = new mongoose.Schema({
+    cidade: { type: String, required: true },
+    estado: { type: String, required: true},
 })
 
 module.exports = mongoose.model('Destino', DestinoSchema)
 
 /* 
-Exemplo 1 de Destino
+Exemplo 1
 {
-  "nome": "São Paulo"
+  "cidade": "Recife",
+  "estado": "PE"
 }
 
-Exemplo 2 de Destino
+Exemplo 2
 {
-  "nome": "Rio de Janeiro"
+  "cidade": "Pipa",
+  "estado": "RN"
+}
+
+Exemplo 3
+{
+  "cidade": "Maceio",
+  "estado": "AL"
 }
 */

@@ -11,13 +11,14 @@ const UserSchema = new mongoose.Schema({
 module.exports = mongoose.model('User', UserSchema)
 
 /* 
-Exemplo de User
+Exemplo 1
 {
   "nome": "Lemos",
   "senha": "123456",
   "email": "lemos@example.com"
 }
 
+Exemplo 2
 {
   "nome": "Ana",
   "senha": "abc123",

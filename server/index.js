@@ -1,6 +1,7 @@
 const express = require('express')
 const estabelecerConexao = require('./config/mongoDb.js')
 const UserRoutes = require('./routes/UserRoutes.js')
+const DestinoRoutes = require('./routes/DestinoRoutes.js')
 
 const app = express()
 
@@ -12,6 +13,7 @@ app.use(express.json())
 
 // Caminho das Rotas que serão utilizadas
 app.use('/users', UserRoutes)
+app.use('/destinos', DestinoRoutes)
 
 // Tratamento de erro caso passe a rota invalida
 app.use((req, res) => {

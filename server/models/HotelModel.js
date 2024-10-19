@@ -10,7 +10,7 @@ const HotelSchema = new mongoose.Schema({
 module.exports = mongoose.model('Hotel', HotelSchema);
 
 /* 
-Exemplo 1 de Hotel
+Exemplo 1 
 {
   "nome": "Hotel Paradise",
   "endereco": "Rua das Flores, 123, São Paulo",
@@ -18,7 +18,7 @@ Exemplo 1 de Hotel
   "quartos": ["60d21b4667d0d8992e610c86", "60d21b4667d0d8992e610c88"] // IDs dos quartos
 }
 
-Exemplo 2 de Hotel
+Exemplo 2 
 {
   "nome": "Hotel Sunshine",
   "endereco": "Avenida do Sol, 456, Rio de Janeiro",

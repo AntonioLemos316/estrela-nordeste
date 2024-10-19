@@ -11,7 +11,7 @@ const ReservaSchema = new mongoose.Schema({
 module.exports = mongoose.model(Reserva, ReservaSchema);
 
 /* 
-Exemplo 1 de Reserva
+Exemplo 1 
 {
   "user": "60d21b4667d0d8992e610c85",  // ID do usuário "Lemos"
   "quarto": "60d21b4667d0d8992e610c86", // ID do quarto que será reservado
@@ -20,7 +20,7 @@ Exemplo 1 de Reserva
   "confirmacao": false
 }
 
-Exemplo 2 de Reserva
+Exemplo 2 
 {
   "user": "60d21b4667d0d8992e610c87",  // ID do usuário "Ana"
   "quarto": "60d21b4667d0d8992e610c88", // ID do quarto que será reservado

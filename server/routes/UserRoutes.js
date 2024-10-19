@@ -49,13 +49,16 @@ router.get('/:id', async (req, res) => {
 router.patch('/:id', async (req, res) => {
     const {id} = req.params
     const {nome, senha, email} = req.body
+    if(!nome && !senha && !email){
+        return res.status(400).send({message: "Preencha um campo"})
+    }
     try {
         const usuarioExiste = await User.findById(id)
         if(usuarioExiste){
             const atulizacaoDoUsuario = {
-                nome: nome !== undefined && nome ? nome : usuarioExiste.nome,
-                senha: senha !== undefined && senha ? senha : usuarioExiste.senha,
-                email: email !== undefined && email ? email : usuarioExiste.email
+                nome: nome !== undefined ? nome : usuarioExiste.nome,
+                senha: senha !== undefined ? senha : usuarioExiste.senha,
+                email: email !== undefined ? email : usuarioExiste.email
             }
 
             const usuarioAtualizado = await User.findByIdAndUpdate(id, atulizacaoDoUsuario, {new: true})
