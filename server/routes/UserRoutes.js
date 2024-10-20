@@ -37,9 +37,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const {id} = req.params
     try {
-        const user = await User.findById(id)
+        const usuarioExiste = await User.findById(id)
+        if(usuarioExiste){
+            return res.status(200).send({message: "Usuario encontrado!", usuarioExiste})
+        }
 
-        return res.status(200).send({message: "Usuario encontrado!", user})
+        return res.status(404).send({message: "Usuario não encontrado"})
     } catch (error) {
         return res.status(500).send({message: "Erro na requisição", error: error.message})
     }

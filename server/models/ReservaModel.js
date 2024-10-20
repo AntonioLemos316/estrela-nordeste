@@ -8,24 +8,23 @@ const ReservaSchema = new mongoose.Schema({
   confirmacao: { type: Boolean, default: false },
 });
 
-module.exports = mongoose.model(Reserva, ReservaSchema);
+module.exports = mongoose.model('Reserva', ReservaSchema);
 
 /* 
 Exemplo 1 
+
 {
-  "user": "60d21b4667d0d8992e610c85",  // ID do usuário "Lemos"
-  "quarto": "60d21b4667d0d8992e610c86", // ID do quarto que será reservado
-  "dataInicial": "2024-10-20T14:00:00Z",
-  "dataFinal": "2024-10-25T10:00:00Z",
-  "confirmacao": false
+  "userId": "671454ecffa204b6f6b7e604",  
+  "quartoId": "67144b9494977f027fc94ddc", 
+  "dataInicial": "2024-10-29",
+  "dataFinal": "2024-11-14"
 }
 
 Exemplo 2 
 {
-  "user": "60d21b4667d0d8992e610c87",  // ID do usuário "Ana"
-  "quarto": "60d21b4667d0d8992e610c88", // ID do quarto que será reservado
-  "dataInicial": "2024-11-01T14:00:00Z",
-  "dataFinal": "2024-11-05T10:00:00Z",
-  "confirmacao": true
+  "userId": "60d21b4667d0d8992e610c87",  
+  "quartoId": "60d21b4667d0d8992e610c88", 
+  "dataInicial": "2024-11-01",
+  "dataFinal": "2024-11-05",
 }
 */

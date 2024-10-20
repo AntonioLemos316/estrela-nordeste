@@ -14,15 +14,15 @@ Exemplo 1
 {
   "nome": "Hotel Paradise",
   "endereco": "Rua das Flores, 123, São Paulo",
-  "destino": "60d21b4667d0d8992e610c89",  // ID do destino
-  "quartos": ["60d21b4667d0d8992e610c86", "60d21b4667d0d8992e610c88"] // IDs dos quartos
+  "destinoId": "60d21b4667d0d8992e610c89",  
+  "quartosIds": ["60d21b4667d0d8992e610c86", "60d21b4667d0d8992e610c88"] 
 }
 
 Exemplo 2 
 {
   "nome": "Hotel Sunshine",
   "endereco": "Avenida do Sol, 456, Rio de Janeiro",
-  "destino": "60d21b4667d0d8992e610c90",  // ID do destino
-  "quartos": ["60d21b4667d0d8992e610c91"] // ID dos quartos
+  "destinoId": "60d21b4667d0d8992e610c90",  
+  "quartosIds": ["60d21b4667d0d8992e610c91"] 
 }
 */

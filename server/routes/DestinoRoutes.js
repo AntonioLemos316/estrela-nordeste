@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
         
         return res.status(201).send({message: "Destino criado", destino})
     } catch (error) {
-        return res.status(500).send({message: "Erro ao criar destino", error: error.message})
+        return res.status(500).send({message: "Erro em criar destino", error: error.message})
     }
 })
 
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
         return res.status(200).send({message: "Destinos encontrados", count: destinos.length, destinos})
     } catch (error) {
-        return res.status(500).send({message: "Erro ao buscar destinos", error: error.message})
+        return res.status(500).send({message: "Erro em buscar destinos", error: error.message})
     }
 })
 
@@ -41,7 +41,7 @@ router.get('/:id', async (req, res) => {
 
         return res.status(404).send({message: "Destino não encontrado"})
     } catch (error) {
-        return res.status(500).send({message: "Erro ao buscar destinos", error: error.message})
+        return res.status(500).send({message: "Erro em buscar destinos", error: error.message})
     }
 })
 
@@ -49,6 +49,7 @@ router.get('/:id', async (req, res) => {
 router.patch('/:id', async (req, res) => {
     const {id} = req.params
     const {cidade, estado} = req.body
+    // OBS; validação a ser adicionada aos outras rotas patch
     if(!cidade && !estado){
         return res.status(400).send({message: "Preencha um campo"})
     }
@@ -66,10 +67,22 @@ router.patch('/:id', async (req, res) => {
 
         return res.status(404).send({message: "Destino não encontrado"})
     } catch (error) {
-        return res.status(500).send({message: "Erro ao buscar destinos", error: error.message})
+        return res.status(500).send({message: "Erro em atualizar destino", error: error.message})
     }
 })
 
 // Exemplo http://localhost:3000/destinos/:id
+router.delete('/:id', async (req, res) => {
+    const {id} = req.params
+    try {
+        const destinoDeletado = await Destino.findByIdAndDelete(id)
+        if(destinoDeletado){
+            return res.status(200).send({message: "Destino deletado com sucesso!"})
+        }
+
+    } catch (error) {
+        return res.status(500).send({message: "Erro em deletar destino", error: error.message });
+    }
+})
 
 module.exports = router

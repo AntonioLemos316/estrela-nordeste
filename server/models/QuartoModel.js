@@ -13,19 +13,19 @@ module.exports = mongoose.model('Quarto', QuartoSchema);
 /* 
 Exemplo 1 
 {
-  "hotel": "60d21b4667d0d8992e610c89",  // ID do hotel "Hotel Paradise"
+  "hotelId": "6714465746d5d9ffaf1a94ff",  
   "tipoDoQuarto": "Duplo",
   "preco": 200,
   "capacidade": 2,
-  "disponibilidade": true
+  "disponibilidade": false
 }
 
 Exemplo 2 
 {
-  "hotel": "60d21b4667d0d8992e610c90",  // ID do hotel "Hotel Sunshine"
-  "tipoDoQuarto": "Individual",
-  "preco": 150,
-  "capacidade": 1,
-  "disponibilidade": false
+  "hotelId": "6714465746d5d9ffaf1a94ff",  
+  "tipoDoQuarto": "Triplo",
+  "preco": 300,
+  "capacidade": 3,
+  "disponibilidade": true
 }
 */
