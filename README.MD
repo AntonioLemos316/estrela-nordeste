@@ -2,7 +2,7 @@
 
 #### DSI 04 | Grupo: Lucas Rodrigues, Gabriel Rodrigues, Fábio Lima, Vinicius Soares
 #### Apoio: Antônio Marques
-A API Estrela do Nordeste, fornecera base para uma plataforma digital destinada a conectar viajantes com opções de hospedagem em hotéis em toda a área de Pernambuco. Com uma interface amigável, permite que usuários pesquisem, compare e reserve hotéis de forma eficiente e segura.
+A API Estrela do Nordeste, fornecerá base para uma plataforma digital destinada a conectar viajantes com opções de hospedagem em hotéis em toda a área de Pernambuco. Com uma interface amigável, permite que usuários pesquisem, compare e reserve hotéis de forma eficiente e segura.
 
 ## Funcionalidades
 
@@ -68,7 +68,7 @@ estrela-nordeste/
 
 1. Clone o repositório:
 ```bash
-   git clone <https://github.com/AntonioLemos316/estrela-nordeste.git>
+   git clone https://github.com/AntonioLemos316/estrela-nordeste.git
 
    cd server // mudança de pasta
 
