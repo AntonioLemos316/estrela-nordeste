@@ -1,6 +1,6 @@
 # API Estrela Nordeste
 
-#### DSI 04 | Grupo: Lucas Rodrigues, Gabriel Rodrigues, Fábio Lima, Vinicius Soares
+#### DSI 06 | Grupo: Lucas Rodrigues, Gabriel Rodrigues, Fábio Lima, Vinicius Soares
 #### Apoio: Antônio Marques
 A API Estrela do Nordeste, fornecerá base para uma plataforma digital destinada a conectar viajantes com opções de hospedagem em hotéis em toda a área de Pernambuco. Com uma interface amigável, permite que usuários pesquisem, compare e reserve hotéis de forma eficiente e segura.
 
